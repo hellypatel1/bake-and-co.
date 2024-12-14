@@ -9,7 +9,7 @@ body {
 /* Header */
 header {
     background-color: #a97c50;
-    padding: 10px 20px;
+    padding: 16px 26px; /* Adjusted using golden ratio */
     position: relative;
 }
 
@@ -22,7 +22,7 @@ header {
 }
 
 .logo a {
-    font-size: 24px;
+    font-size: 25px; /* Adjusted using golden ratio */
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -33,20 +33,20 @@ header {
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 20px;
+    gap: 26px; /* Adjusted using golden ratio */
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 26px; /* Adjusted using golden ratio */
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 16px; /* Adjusted slightly for readability */
 }
 
 .cta-button .order-now {
@@ -54,7 +54,7 @@ header {
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 16px; /* Adjusted padding using golden ratio */
     border-radius: 5px;
 }
 
@@ -73,9 +73,9 @@ header {
 
 .hamburger span {
     height: 3px;
-    width: 25px;
+    width: 28px; /* Adjusted using golden ratio */
     background-color: #fff;
-    margin: 4px 0;
+    margin: 5px 0; /* Adjusted spacing */
     transition: all 0.3s ease-in-out;
 }
 
@@ -102,7 +102,7 @@ header {
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
-    padding: 20px;
+    padding: 24px; /* Adjusted for better spacing */
 }
 
 .mobile-menu.open {
@@ -127,7 +127,7 @@ header {
     background-color: #fcca45;
     color: #000;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px 16px; /* Adjusted using golden ratio */
     border-radius: 5px;
 }
 
