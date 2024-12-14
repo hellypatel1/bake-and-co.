@@ -8,9 +8,19 @@
     <!-- Include Navbar -->
     <%- include('./partials/navbar.ejs'); %>
 
-    <h1>Welcome to Bake & Co.!</h1>
-    <p>Your destination for freshly baked delights.</p>
-
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img class="hero-background" src="/images/hero-bakery.jpg" alt="A cozy bakery with bread and pastries">
+        <div class="hero-content">
+          <h1>Freshly Baked with Love</h1>
+          <p>Experience the magic of artisanal baking, crafted to delight your senses.</p>
+          <div class="hero-buttons">
+            <a href="/menu" class="btn-primary">View Menu</a>
+            <a href="/order" class="btn-secondary">Order Online</a>
+          </div>
+        </div>
+    </div>        
+      
     <!-- Include Footer -->
     <%- include('./partials/footer.ejs'); %>
 
