@@ -8,8 +8,9 @@ body {
 
 /* Header */
 header {
-    background-color: #a97c50;
-    padding: 16px 26px; /* Adjusted using golden ratio */
+    background: linear-gradient(90deg, #a97c50, #d4a76a);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px 20px; /* Adjusted padding based on golden ratio */
     position: relative;
 }
 
@@ -19,7 +20,21 @@ header {
     align-items: center;
     position: relative;
     z-index: 1001; /* Ensure navbar stays on top */
+    padding: 10px 20px; /* Adjust padding to center items vertically */
+    height: 40px; /* Adjusted height for golden ratio balance */
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 64.72px; /* Adjust the size to match your header design */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px;
+}
+
 
 .logo a {
     font-size: 25px; /* Adjusted using golden ratio */
@@ -40,6 +55,7 @@ header {
     display: flex;
     align-items: center;
     gap: 26px; /* Adjusted using golden ratio */
+    margin-left: auto; /* Push links and CTA to the right */
 }
 
 .nav-links a {
@@ -54,12 +70,24 @@ header {
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 16px; /* Adjusted padding using golden ratio */
+    padding: 8px 16px; /* Adjusted padding using golden ratio */
     border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #fcca45; /* Golden underline on hover */
+    color: #fcca45;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button {
+    margin-left: 20px; /* Add spacing before the Order Now button */
 }
 
 .cta-button .order-now:hover {
     background-color: #ffc107;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Hamburger Menu */
@@ -148,6 +176,11 @@ header {
 
     .mobile-menu.open {
         right: 0;
+        padding-top: 20px;
+    }
+
+    .logo-img {
+        max-height: 50px; /* Smaller logo for mobile screens */
     }
 }
 
