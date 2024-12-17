@@ -107,14 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${index * 0.2}s`; // Staggered delay
           entry.target.classList.add("fade-in");
-          observer.unobserve(entry.target); // Stop observing once animated
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.3 } // Trigger when 30% of the card is visible
+    { threshold: 0.3 }
   );
 
   testimonialCards.forEach((card) => observer.observe(card));
