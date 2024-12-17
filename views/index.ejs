@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Dancing+Script:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <title><%= title %> | Bake & Co.</title>
     <link rel="stylesheet" href="/css/main.css">
   </head>
@@ -10,16 +11,17 @@
 
     <!-- Hero Section -->
     <div class="hero-section">
-        <img class="hero-background" src="/images/hero-bakery.jpg" alt="A cozy bakery with bread and pastries">
+        <div class="hero-background"></div>
         <div class="hero-content">
-          <h1>Freshly Baked with Love</h1>
-          <p>Experience the magic of artisanal baking, crafted to delight your senses.</p>
-          <div class="hero-buttons">
+        <h1>Freshly Baked with Love</h1>
+        <p>Experience the magic of artisanal baking, crafted to delight your senses.</p>
+        <div class="hero-buttons">
             <a href="/menu" class="btn-primary">View Menu</a>
             <a href="/order" class="btn-secondary">Order Online</a>
-          </div>
         </div>
-    </div>        
+        <div class="hero-accent">❦</div> <!-- Subtle romantic flourish -->
+        </div>
+    </div>
       
     <!-- Include Footer -->
     <%- include('./partials/footer.ejs'); %>
