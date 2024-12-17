@@ -100,3 +100,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(storySection);
 });
+
+// Testimonials - Scroll Effect
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    },
+    { threshold: 0.3 } // Trigger when 30% of the card is visible
+  );
+
+  testimonialCards.forEach((card) => observer.observe(card));
+});

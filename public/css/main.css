@@ -894,12 +894,19 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 320px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .testimonial-card:hover {
   transform: translateY(-10px); /* Lift effect */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.testimonial-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .testimonial-accent {
