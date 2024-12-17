@@ -882,6 +882,9 @@ header {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
 }
 
 .testimonial-card {
@@ -891,6 +894,20 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.testimonial-accent {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #fcca45;
+  margin-bottom: 10px;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 .quote {
@@ -921,4 +938,20 @@ header {
   color: #a97c50;
   font-weight: bold;
   font-size: 14px;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
 }
