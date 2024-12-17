@@ -1103,6 +1103,7 @@ footer {
 
 .footer-section {
   max-width: 220px; /* Balance the width for golden layout */
+  padding: 0 20px; /* Add equal padding horizontally */
 }
 
 /* Footer Logo */
@@ -1159,14 +1160,14 @@ footer {
 }
 
 .social-images img {
-  width: 32px; /* Image size */
-  height: 32px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .social-images img:hover {
-  transform: scale(1.2); /* Slight zoom-in effect */
-  opacity: 0.8; /* Soft hover effect */
+  transform: scale(1.2);
+  filter: brightness(1) sepia(0); /* Highlight on hover */
 }
 
 /* Legal & Copyright */
