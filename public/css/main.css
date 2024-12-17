@@ -968,6 +968,8 @@ header {
   background: #fef5e7; /* Romantic, soft background */
   text-align: center;
   padding: 60px 20px;
+  border-bottom: 1px solid #f0e3d0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .cta-container h2 {
@@ -1006,6 +1008,12 @@ header {
 button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+}
+
+.cta-container p, 
+.newsletter-container p {
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 /* Newsletter Section */
@@ -1051,8 +1059,9 @@ button:hover {
 
 .newsletter-form input, 
 .newsletter-form button {
-    padding: 12px;
-    height: 45px; /* Maintain a consistent height */
+    height: 50px; /* Match heights */
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 .newsletter-form button:hover {
