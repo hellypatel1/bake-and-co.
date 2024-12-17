@@ -79,3 +79,24 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(updateCountdown, 1000);
   updateCountdown();
 });
+
+
+// Story Section - Scroll Effect Function
+document.addEventListener("DOMContentLoaded", function () {
+  const storySection = document.querySelector(".story-section");
+
+  const observer = new IntersectionObserver(
+      (entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  storySection.classList.add("visible");
+              }
+          });
+      },
+      {
+          threshold: 0.5, // Trigger when 50% of the section is visible
+      }
+  );
+
+  observer.observe(storySection);
+});
