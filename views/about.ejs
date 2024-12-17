@@ -1,15 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %> | Bake & Co.</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Bake & Co.</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Include Navbar -->
     <%- include('./partials/navbar.ejs'); %>
 
-    <h1>About Bake & Co.</h1>
-    <p>At Bake & Co., we craft baked goods that bring joy to every bite.</p>
+    <!-- About Us Section -->
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-header">
+          <h1 class="about-title">❦ A Love Story Baked to Perfection</h1>
+          <p class="about-subtitle">
+            At <strong>Bake & Co.</strong>, baking is an art of connection,
+            passion, and care. Each creation is crafted to warm hearts and
+            create lasting memories.
+          </p>
+        </div>
+
+        <!-- Philosophy Section -->
+        <div class="about-philosophy">
+          <h2>Our Philosophy: Love in Every Layer</h2>
+          <p>
+            Rooted in the <em>art of slow, intentional baking</em>, we balance
+            flavors, textures, and aromas to delight your senses. Like nature’s
+            golden proportions, our recipes achieve perfect harmony.
+          </p>
+        </div>
+
+        <!-- Meet Our Kitchen Section -->
+        <div class="about-kitchen">
+          <h2>Meet Our Kitchen of Love</h2>
+          <p>
+            Our bakers are storytellers. Each recipe is a poem, and every baked
+            good is a piece of our heart. We honor tradition while embracing
+            creativity to make your moments unforgettable.
+          </p>
+        </div>
+
+        <!-- Closing Call to Action -->
+        <div class="about-cta">
+          <p>
+            <strong>Bake & Co.</strong> — where love is always in the recipe.
+            Join us to savor the magic of artisanal baking.
+          </p>
+          <a href="/menu" class="btn-primary">Explore Our Menu</a>
+        </div>
+      </div>
+    </section>
 
     <!-- Include Footer -->
     <%- include('./partials/footer.ejs'); %>
