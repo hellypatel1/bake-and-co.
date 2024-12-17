@@ -13,5 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.remove('open'); // Reset the X icon
       }
     });
+});
+
+document.addEventListener('scroll', () => {
+  const cards = document.querySelectorAll('.product-card');
+  const triggerPoint = window.innerHeight * 0.8;
+
+  cards.forEach((card) => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < triggerPoint) {
+      card.classList.add('visible');
+    }
   });
-  
+});
