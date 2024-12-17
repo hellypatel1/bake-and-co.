@@ -544,3 +544,93 @@ header {
 .parallax-card {
   transform: translateY(0px);
 }
+
+/* Specials Section */
+.specials-section {
+  background: #fef8f3; /* Warm and soft romantic background */
+  padding: 56px 30px; /* Golden ratio spacing */
+  text-align: center;
+}
+
+.specials-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.specials-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px; /* Golden ratio scale */
+  color: #a97c50; /* Warm and indulgent brand tone */
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.specials-description {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  color: #5e4b3a;
+  margin-bottom: 40px; /* Breathing room */
+  line-height: 1.6;
+}
+
+.specials-items {
+  display: flex;
+  justify-content: space-around;
+  gap: 32px; /* Golden ratio spacing */
+  flex-wrap: wrap;
+}
+
+.special-item {
+  background: #fff;
+  padding: 20px 28px; /* Balanced spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 260px; /* Golden ratio container width */
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.special-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #a97c50;
+  margin-bottom: 10px;
+}
+
+.item-description {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #5e4b3a;
+  margin-bottom: 8px;
+}
+
+.item-price {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #d4a76a;
+}
+
+/* Countdown Timer */
+.countdown-container {
+  margin-top: 40px;
+}
+
+.countdown-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #5e4b3a;
+  margin-bottom: 10px;
+}
+
+.countdown-timer {
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  color: #d04f50;
+  letter-spacing: 2px;
+}
