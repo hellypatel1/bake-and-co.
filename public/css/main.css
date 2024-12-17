@@ -401,4 +401,146 @@ header {
       padding: 12px 24px;
     }
   }
-  
+
+/* Featured Products Section */
+.featured-products {
+  text-align: center;
+  background: linear-gradient(to bottom, #fefaf6, #f9e8d7);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  color: #6b5b4d;
+  margin-top: 10px;
+}
+
+.products-header {
+  margin-bottom: 40px;
+}
+
+.products-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px; /* Golden Ratio sizing */
+  color: #a97c50; /* Warm brown tone */
+  margin-bottom: 10px;
+}
+
+.products-header p {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  color: #6b5b4d; /* Softer brown */
+  margin-bottom: 30px;
+}
+
+/* Product Grid */
+.products-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Reduce the space between cards */
+}
+
+/* Product Card */
+.product-card {
+  background: linear-gradient(to bottom, #ffffff, #f8f1e7);
+  background-clip: padding-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 300px; /* Golden ratio width */
+  height: 420px; /* Adjusted height based on golden ratio */
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+  will-change: transform; /* Hardware acceleration */
+}
+
+.product-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:hover {
+  border-image: linear-gradient(to bottom, #fcca45, #e89b54);
+  border-image-slice: 1;
+  transform: translateY(-5px); /* Slight lift */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.product-card:hover .product-img {
+  transform: translateY(-10px); /* Parallax lift effect */
+}
+
+.product-img {
+  width: 100%;
+  height: 60%; /* Limit image to 60% of the card height */
+  border-radius: 12px 12px 0 0; /* Top corners rounded */
+  object-fit: cover; /* Ensures full image display */
+  object-position: center; /* Center-align the image */
+  display: block; /* Prevent default inline spacing */
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+/* Card Content */
+.product-card h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin: 15px 0 5px;
+  color: #a97c50; /* Highlighted product title */
+}
+
+.product-content {
+  flex: 1;
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.product-content h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #a97c50;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d4a76a;
+  margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.btn-featured {
+  display: inline-block;
+  background-color: #fcca45; /* Golden highlight */
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.btn-featured:hover {
+  background-color: #ffc107;
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Parallax Effect for Cards */
+.parallax-card {
+  transform: translateY(0px);
+}
