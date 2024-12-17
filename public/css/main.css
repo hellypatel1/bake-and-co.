@@ -778,6 +778,14 @@ header {
   padding: 72px 36px; /* Golden ratio spacing */
   text-align: center;
   color: #5a3e36; /* Rich warm brown */
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Start slightly lower */
+  transition: all 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+.story-section.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
 }
 
 .story-container {
