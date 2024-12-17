@@ -1087,11 +1087,13 @@ button:hover {
 
 /* Footer Styling */
 footer {
-  background: #a97c50; /* Warm brown tone for The Lover archetype */
+  background: linear-gradient(135deg, #a97c50, #d4a76a); /* Romantic warm gradient */
   color: #fff;
   font-family: 'Lora', serif;
-  padding: 48px 20px; /* Adjusted for Golden Ratio */
+  padding: 48px 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-container {
@@ -1130,13 +1132,14 @@ footer {
 }
 
 .footer-section a {
-  color: #fff;
+  color: #fcca45;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-section a:hover {
   color: #fcca45; /* Highlight on hover */
+  transform: scale(1.05);
 }
 
 /* Social Media Icons */
@@ -1162,12 +1165,26 @@ footer {
 .social-images img {
   width: 28px;
   height: 28px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
 }
 
 .social-images img:hover {
-  transform: scale(1.2);
-  filter: brightness(1) sepia(0); /* Highlight on hover */
+  transform: translateY(-5px) scale(1.1); /* Gentle lift and scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative Wave Effect */
+footer::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23a97c50" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,170.7C672,149,768,139,864,154.7C960,171,1056,213,1152,202.7C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 
 /* Legal & Copyright */
