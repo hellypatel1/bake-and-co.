@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fefaf6;
     color: #333;
+    padding-top: 80px; /* Prevent content from hiding under the fixed header */
 }
 
 /* Header */
@@ -16,7 +17,11 @@ header {
     background: linear-gradient(90deg, #a97c50, #d4a76a);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 12px 20px; /* Adjusted padding based on golden ratio */
-    position: relative;
+    position: fixed; /* Make the header fixed at the top */
+    top: 0; /* Align it to the top of the viewport */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Stretch header across the full width */
+    z-index: 1001; /* Ensure it stays above other elements */
 }
 
 .navbar {
@@ -59,7 +64,7 @@ header {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 26px; /* Adjusted using golden ratio */
+    gap: 16px; /* Golden ratio: reduced spacing for balanced layout */
     margin-left: auto; /* Push links and CTA to the right */
 }
 
@@ -67,7 +72,9 @@ header {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px; /* Adjusted slightly for readability */
+    font-size: 16px; /* Golden ratio font size */
+    padding: 5px 8px; /* Balanced padding around text */
+    transition: all 0.3s ease-in-out;
 }
 
 .cta-button .order-now {
@@ -78,21 +85,34 @@ header {
     padding: 8px 16px; /* Adjusted padding using golden ratio */
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-right: 26px;
 }
 
 .nav-links a:hover {
     border-bottom: 2px solid #fcca45; /* Golden underline on hover */
     color: #fcca45;
+    transform: scale(1.05); /* Slight scaling for better interaction */
     transition: all 0.3s ease-in-out;
 }
 
 .cta-button {
-    margin-left: 20px; /* Add spacing before the Order Now button */
+    margin-left: 16px; /* Add spacing before the Order Now button */
+}
+
+.cta-button .order-now {
+  background-color: #fcca45;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 16px; /* Adjusted padding for balance */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button .order-now:hover {
     background-color: #ffc107;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 /* Hamburger Menu */
@@ -102,6 +122,7 @@ header {
     cursor: pointer;
     z-index: 1002; /* Ensure hamburger icon stays on top */
     position: relative; /* So it’s clickable over the mobile menu */
+    margin-right: 26px;
 }
 
 .hamburger span {
