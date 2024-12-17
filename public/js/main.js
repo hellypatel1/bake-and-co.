@@ -30,6 +30,31 @@ document.addEventListener('scroll', () => {
 
 //Specials Section
 document.addEventListener('DOMContentLoaded', function () {
+  const specialsSection = document.querySelector('.specials-section');
+
+  if (!specialsSection) {
+    console.error("Specials Section not found.");
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        specialsSection.classList.add('animate-specials');
+        observer.unobserve(entry.target); // Stop observing after animation runs
+      }
+    });
+  }, {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.3, // Trigger when 30% of the section is visible
+  });
+
+  observer.observe(specialsSection);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
   const countdownElement = document.getElementById('countdown');
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 3); // 3-day countdown
