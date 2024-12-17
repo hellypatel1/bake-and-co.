@@ -992,6 +992,7 @@ header {
 
 .cta-buttons .btn-primary,
 .cta-buttons .btn-secondary {
+  text-decoration: none;
   padding: 14px 32px;
   border-radius: 5px;
   transition: transform 0.3s ease;
@@ -1000,6 +1001,11 @@ header {
 .cta-buttons .btn-primary:hover,
 .cta-buttons .btn-secondary:hover {
   transform: scale(1.05);
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Newsletter Section */
@@ -1041,6 +1047,12 @@ header {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+
+.newsletter-form input, 
+.newsletter-form button {
+    padding: 12px;
+    height: 45px; /* Maintain a consistent height */
 }
 
 .newsletter-form button:hover {
