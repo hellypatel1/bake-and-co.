@@ -1,4 +1,9 @@
 /* General Styles */
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -1066,4 +1071,16 @@ button:hover {
 
 .newsletter-form button:hover {
   transform: scale(1.05);
+}
+
+/* Scroll Fade-In Effect */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px); /* Start slightly below */
+  transition: all 0.8s ease-out;
+}
+
+.scroll-fade-in.show {
+  opacity: 1;
+  transform: translateY(0); /* Reset position */
 }

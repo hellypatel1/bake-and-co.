@@ -120,3 +120,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   testimonialCards.forEach((card) => observer.observe(card));
 });
+
+// CTA/NewsLetter - Scroll Effect
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollElements = document.querySelectorAll('.scroll-fade-in');
+
+  const scrollHandler = () => {
+      scrollElements.forEach((element) => {
+          const position = element.getBoundingClientRect().top;
+          const screenHeight = window.innerHeight;
+
+          if (position < screenHeight * 0.85) {
+              element.classList.add('show');
+          }
+      });
+  };
+
+  // Run on scroll and page load
+  window.addEventListener('scroll', scrollHandler);
+  scrollHandler();
+});
